@@ -6,10 +6,9 @@ import Footer from './Footer';
 import LineChart from './LineChart';
 
 const App = () => (
-  <div className="App">
-    <Header />
+  <div id='app-container'>
+    <Header id='app-header'/>
     <div id="content-wrapper">
-      <div id="content">
         <div id="breadcrumb">
           <ol>
             <li className="first">
@@ -19,12 +18,10 @@ const App = () => (
         </div>
         <div id="dashboard-title">
           <h4 id="dash-title">Dashboard Title</h4>
-          <h4 id="dash-sub-title">Dashboard Subtitle</h4>
         </div>
-        <LineChart />
-      </div>
+        <LineChart id='vis' />
     </div>
-    <Footer />
+    <Footer id='app-footer' />
   </div>
 );
 

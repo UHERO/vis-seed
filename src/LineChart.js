@@ -27,26 +27,28 @@ const medianEarnings = [
 ];
 
 const LineChart = () => (
-  <XYFrame
-    title="Median Earnings"
-    size={[700, 500]}
-    lines={medianEarnings}
-    xScaleType={scaleTime()}
-    xAccessor={d => new Date(d.date)}
-    yAccessor="earnings"
-    lineStyle={{ stroke: '#1D667F' }}
-    lineRenderMode="sketchy"
-    margin={{
-      left: 80,
-      bottom: 50,
-      right: 10,
-      top: 40,
-    }}
-    axes={[
-      { orient: 'left' },
-      { orient: 'bottom', tickFormat: d => `${d.getMonth()}/${d.getYear()}` },
-    ]}
-  />
+  <div id='line-chart'>
+    <XYFrame
+      title="Median Earnings"
+      size={[700, 500]}
+      lines={medianEarnings}
+      xScaleType={scaleTime()}
+      xAccessor={d => new Date(d.date)}
+      yAccessor="earnings"
+      lineStyle={{ stroke: '#1D667F' }}
+      lineRenderMode="sketchy"
+      margin={{
+        left: 80,
+        bottom: 50,
+        right: 10,
+        top: 40,
+      }}
+      axes={[
+        { orient: 'left' },
+        { orient: 'bottom', tickFormat: d => `${d.getMonth()}/${d.getYear()}` },
+      ]}
+    />
+  </div>
 );
 
 export default LineChart;
